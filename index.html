@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARENA MOBILE — Les Meilleurs Jeux Mobile</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">⚔</span>
+      <span class="logo-text">ARENA<span class="accent">MOBILE</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#jeux">Jeux</a></li>
+      <li><a href="#categories">Catégories</a></li>
+      <li><a href="#nouveautes">Nouveautés</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta">Rejoindre</button>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-scanlines"></div>
+    <div class="hero-content">
+      <p class="hero-tag">🎮 Plateforme #1 des jeux mobiles</p>
+      <h1 class="hero-title">
+        <span class="line1">DOMINE</span>
+        <span class="line2">LE JEU</span>
+        <span class="line3">MOBILE</span>
+      </h1>
+      <p class="hero-desc">
+        Découvrez les meilleurs jeux mobiles — Battle Royale, FPS, Stratégie, RPG et bien plus. 
+        Tous les titres que tu aimes, en un seul endroit.
+      </p>
+      <div class="hero-btns">
+        <a href="#jeux" class="btn-primary">Explorer les jeux</a>
+        <a href="#nouveautes" class="btn-secondary">Nouveautés →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">150+</span><span class="stat-label">Jeux listés</span></div>
+        <div class="stat-sep">|</div>
+        <div class="stat"><span class="stat-num">50M+</span><span class="stat-label">Joueurs actifs</span></div>
+        <div class="stat-sep">|</div>
+        <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Disponible</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="glitch-circle">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+        <div class="circle c3"></div>
+        <div class="icon-orbit">🔫</div>
+        <div class="icon-orbit i2">💣</div>
+        <div class="icon-orbit i3">🏆</div>
+        <div class="icon-orbit i4">⚡</div>
+      </div>
+    </div>
+    <div class="scroll-hint">↓ SCROLL</div>
+  </section>
+
+  <!-- FEATURED BANNER -->
+  <div class="featured-strip">
+    <div class="strip-inner">
+      <span>🔥 FREE FIRE</span><span>⚔ CALL OF DUTY</span><span>🐔 PUBG MOBILE</span>
+      <span>🏎 CLASH ROYALE</span><span>⚡ BRAWL STARS</span><span>🌟 GENSHIN IMPACT</span>
+      <span>🔫 VALORANT MOBILE</span><span>🏆 MOBILE LEGENDS</span><span>💥 FORTNITE</span>
+      <span>🔥 FREE FIRE</span><span>⚔ CALL OF DUTY</span><span>🐔 PUBG MOBILE</span>
+      <span>🏎 CLASH ROYALE</span><span>⚡ BRAWL STARS</span><span>🌟 GENSHIN IMPACT</span>
+    </div>
+  </div>
+
+  <!-- JEUX VEDETTES -->
+  <section class="games-section" id="jeux">
+    <div class="section-header">
+      <p class="section-tag">SÉLECTION PREMIUM</p>
+      <h2 class="section-title">Jeux <span class="accent">Incontournables</span></h2>
+      <p class="section-sub">Les titres les plus joués, les plus épiques, les plus addictifs</p>
+    </div>
+
+    <div class="games-grid">
+
+      <!-- FREE FIRE -->
+      <div class="game-card featured" data-genre="battle-royale">
+        <div class="card-bg" style="--card-color: #ff6b00;"></div>
+        <div class="card-badge">🔥 HOT</div>
+        <div class="card-icon">🔥</div>
+        <div class="card-genre-tag">BATTLE ROYALE</div>
+        <h3 class="card-title">FREE FIRE</h3>
+        <p class="card-desc">50 joueurs s'affrontent sur une île. Sois le dernier survivant dans ce battle royale ultra-intense optimisé pour mobile.</p>
+        <div class="card-meta">
+          <span class="rating">★★★★★</span>
+          <span class="players">500M+ joueurs</span>
+        </div>
+        <div class="card-tags">
+          <span>Survie</span><span>FPS</span><span>Gratuit</span>
+        </div>
+        <a href="#" class="card-btn">Découvrir →</a>
+        <div class="card-glow"></div>
+      </div>
+
+      <!-- COD MOBILE -->
+      <div class="game-card featured" data-genre="fps">
+        <div class="card-bg" style="--card-color: #00b4ff;"></div>
+        <div class="card-badge">⭐ TOP</div>
+        <div class="card-icon">⚔</div>
+        <div class="card-genre-tag">FPS / BATTLE ROYALE</div>
+        <h3 class="card-title">CALL OF DUTY</h3>
+        <p class="card-desc">L'expérience Call of Duty complète sur mobile. Multijoueur intense, Battle Royale Warzone et modes classiques emblématiques.</p>
+        <div class="card-meta">
+          <span class="rating">★★★★★</span>
+          <span class="players">650M+ joueurs</span>
+        </div>
+        <div class="card-tags">
+          <span>FPS</span><span>Multijoueur</span><span>Gratuit</span>
+        </div>
+        <a href="#" class="card-btn">Découvrir →</a>
+        <div class="card-glow"></div>
+      </div>
+
+      <!-- PUBG MOBILE -->
+      <div class="game-card" data-genre="battle-royale">
+        <div class="card-bg" style="--card-color: #ffd700;"></div>
+        <div class="card-icon">🐔</div>
+        <div class="card-genre-tag">BATTLE ROYALE</div>
+        <h3 class="card-title">PUBG MOBILE</h3>
+        <p class="card-desc">Le pionnier du Battle Royale. 100 joueurs, une carte immense, un seul vainqueur. Réalisme maximal sur mobile.</p>
+        <div class="card-meta">
+          <span class="rating">★★★★☆</span>
+          <span class="players">400M+ joueurs</span>
+        </div>
+        <div class="card-tags">
+          <span>Réaliste</span><span>Tactique</span><span>Gratuit</span>
+        </div>
+        <a href="#" class="card-btn">Découvrir →</a>
+        <div class="card-glow"></div>
+      </div>
+
+      <!-- CLASH ROYALE -->
+      <div class="game-card" data-genre="strategie">
+        <div class="card-bg" style="--card-color: #9b59b6;"></div>
+        <div class="card-icon">🏰</div>
+        <div class="card-genre-tag">STRATÉGIE</div>
+        <h3 class="card-title">CLASH ROYALE</h3>
+        <p class="card-desc">Combats de cartes en temps réel. Construis ton deck, détruis les tours adverses et grimpe les arènes mondiales.</p>
+        <div class="card-meta">
+          <span class="rating">★★★★☆</span>
+          <span class="players">150M+ joueurs</span>
+        </div>
+        <div class="card-tags">
+          <span>Stratégie</span><span>Cartes</span><span>Gratuit</span>
+        </div>
+        <a href="#" class="card-btn">Découvrir →</a>
+        <div class="card-glow"></div>
+      </div>
+
+      <!-- BRAWL STARS -->
+      <div class="game-card" data-genre="action">
+        <div class="card-bg" style="--card-color: #e74c3c;"></div>
+        <div class="card-icon">⚡</div>
+        <div class="card-genre-tag">ACTION / MOBA</div>
+        <h3 class="card-title">BRAWL STARS</h3>
+        <p class="card-desc">Combats en arène 3v3 ultra-rapides. Débloquez des dizaines de Brawlers uniques et écrasez vos adversaires.</p>
+        <div class="card-meta">
+          <span class="rating">★★★★★</span>
+          <span class="players">200M+ joueurs</span>
+        </div>
+        <div class="card-tags">
+          <span>MOBA</span><span>3v3</span><span>Gratuit</span>
+        </div>
+        <a href="#" class="card-btn">Découvrir →</a>
+        <div class="card-glow"></div>
+      </div>
+
+      <!-- GENSHIN IMPACT -->
+      <div class="game-card" data-genre="rpg">
+        <div class="card-bg" style="--card-color: #1abc9c;"></div>
+        <div class="card-icon">🌟</div>
+        <div class="card-genre-tag">RPG / ACTION</div>
+        <h3 class="card-title">GENSHIN IMPACT</h3>
+        <p class="card-desc">Un monde open-world somptueux à explorer. Équipe de personnages aux pouvoirs élémentaires uniques, quêtes épiques.</p>
+        <div class="card-meta">
+          <span class="rating">★★★★★</span>
+          <span class="players">100M+ joueurs</span>
+        </div>
+        <div class="card-tags">
+          <span>RPG</span><span>Open World</span><span>Gratuit</span>
+        </div>
+        <a href="#" class="card-btn">Découvrir →</a>
+        <div class="card-glow"></div>
+      </div>
+
+      <!-- MOBILE LEGENDS -->
+      <div class="game-card" data-genre="moba">
+        <div class="card-bg" style="--card-color: #3498db;"></div>
+        <div class="card-icon">🗡</div>
+        <div class="card-genre-tag">MOBA</div>
+        <h3 class="card-title">MOBILE LEGENDS</h3>
+        <p class="card-desc">Le MOBA le plus populaire sur mobile. 5v5 stratégiques, plus de 100 héros à maîtriser, tournois mondiaux.</p>
+        <div class="card-meta">
+          <span class="rating">★★★★☆</span>
+          <span class="players">500M+ joueurs</span>
+        </div>
+        <div class="card-tags">
+          <span>MOBA</span><span>5v5</span><span>Gratuit</span>
+        </div>
+        <a href="#" class="card-btn">Découvrir →</a>
+        <div class="card-glow"></div>
+      </div>
+
+      <!-- MINECRAFT -->
+      <div class="game-card" data-genre="aventure">
+        <div class="card-bg" style="--card-color: #27ae60;"></div>
+        <div class="card-icon">⛏</div>
+        <div class="card-genre-tag">SANDBOX / AVENTURE</div>
+        <h3 class="card-title">MINECRAFT</h3>
+        <p class="card-desc">Construis, survie et explore des mondes infinis générés aléatoirement. La créativité sans limite dans ta poche.</p>
+        <div class="card-meta">
+          <span class="rating">★★★★★</span>
+          <span class="players">1B+ joueurs</span>
+        </div>
+        <div class="card-tags">
+          <span>Sandbox</span><span>Survie</span><span>Payant</span>
+        </div>
+        <a href="#" class="card-btn">Découvrir →</a>
+        <div class="card-glow"></div>
+      </div>
+
+      <!-- FORTNITE -->
+      <div class="game-card" data-genre="battle-royale">
+        <div class="card-bg" style="--card-color: #8e44ad;"></div>
+        <div class="card-icon">💥</div>
+        <div class="card-genre-tag">BATTLE ROYALE</div>
+        <h3 class="card-title">FORTNITE</h3>
+        <p class="card-desc">Battle Royale avec construction unique. Construis, tire et survie dans un univers coloré avec des collaborations iconiques.</p>
+        <div class="card-meta">
+          <span class="rating">★★★★☆</span>
+          <span class="players">350M+ joueurs</span>
+        </div>
+        <div class="card-tags">
+          <span>Battle Royale</span><span>Build</span><span>Gratuit</span>
+        </div>
+        <a href="#" class="card-btn">Découvrir →</a>
+        <div class="card-glow"></div>
+      </div>
+
+    </div>
+
+    <!-- FILTRE PAR GENRE -->
+    <div class="filter-bar" id="categories">
+      <span class="filter-label">Filtrer :</span>
+      <button class="filter-btn active" onclick="filterGames('all')">Tous</button>
+      <button class="filter-btn" onclick="filterGames('battle-royale')">Battle Royale</button>
+      <button class="filter-btn" onclick="filterGames('fps')">FPS</button>
+      <button class="filter-btn" onclick="filterGames('moba')">MOBA</button>
+      <button class="filter-btn" onclick="filterGames('strategie')">Stratégie</button>
+      <button class="filter-btn" onclick="filterGames('rpg')">RPG</button>
+      <button class="filter-btn" onclick="filterGames('aventure')">Aventure</button>
+    </div>
+  </section>
+
+  <!-- CATEGORIES SECTION -->
+  <section class="categories-section">
+    <div class="section-header">
+      <p class="section-tag">PAR TYPE</p>
+      <h2 class="section-title">Toutes les <span class="accent">Catégories</span></h2>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card" style="--cat-color: #ff6b00;">
+        <span class="cat-icon">🔫</span>
+        <h4>Battle Royale</h4>
+        <p>15 jeux</p>
+      </div>
+      <div class="cat-card" style="--cat-color: #00b4ff;">
+        <span class="cat-icon">⚔</span>
+        <h4>FPS / TPS</h4>
+        <p>22 jeux</p>
+      </div>
+      <div class="cat-card" style="--cat-color: #9b59b6;">
+        <span class="cat-icon">🏰</span>
+        <h4>Stratégie</h4>
+        <p>30 jeux</p>
+      </div>
+      <div class="cat-card" style="--cat-color: #e74c3c;">
+        <span class="cat-icon">⚡</span>
+        <h4>MOBA</h4>
+        <p>12 jeux</p>
+      </div>
+      <div class="cat-card" style="--cat-color: #1abc9c;">
+        <span class="cat-icon">🌟</span>
+        <h4>RPG</h4>
+        <p>25 jeux</p>
+      </div>
+      <div class="cat-card" style="--cat-color: #27ae60;">
+        <span class="cat-icon">⛏</span>
+        <h4>Aventure</h4>
+        <p>18 jeux</p>
+      </div>
+      <div class="cat-card" style="--cat-color: #f39c12;">
+        <span class="cat-icon">🏎</span>
+        <h4>Course</h4>
+        <p>20 jeux</p>
+      </div>
+      <div class="cat-card" style="--cat-color: #e67e22;">
+        <span class="cat-icon">⚽</span>
+        <h4>Sport</h4>
+        <p>14 jeux</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOUVEAUTES -->
+  <section class="new-section" id="nouveautes">
+    <div class="section-header">
+      <p class="section-tag">DERNIÈRES SORTIES</p>
+      <h2 class="section-title">Nouveautés <span class="accent">2024-2025</span></h2>
+    </div>
+    <div class="new-grid">
+      <div class="new-card">
+        <div class="new-label">NOUVEAU</div>
+        <div class="new-icon">🎯</div>
+        <div class="new-info">
+          <h4>Delta Force Mobile</h4>
+          <span class="new-genre">FPS Tactique</span>
+          <p>Le FPS tactique nouvelle génération. Graphismes époustouflants, gameplay réaliste.</p>
+        </div>
+      </div>
+      <div class="new-card">
+        <div class="new-label">BÊTA</div>
+        <div class="new-icon">🛸</div>
+        <div class="new-info">
+          <h4>Marvel Rivals Mobile</h4>
+          <span class="new-genre">Hero Shooter</span>
+          <p>Affrontez vos ennemis avec les super-héros Marvel en 6v6 explosif.</p>
+        </div>
+      </div>
+      <div class="new-card">
+        <div class="new-label">NOUVEAU</div>
+        <div class="new-icon">🐉</div>
+        <div class="new-info">
+          <h4>Honkai Star Rail</h4>
+          <span class="new-genre">RPG Tour par Tour</span>
+          <p>Voyage dans l'espace avec une équipe de personnages uniques aux pouvoirs extraordinaires.</p>
+        </div>
+      </div>
+      <div class="new-card">
+        <div class="new-label">À VENIR</div>
+        <div class="new-icon">🔮</div>
+        <div class="new-info">
+          <h4>Valorant Mobile</h4>
+          <span class="new-genre">FPS Tactique</span>
+          <p>Le hit PC de Riot Games arrive enfin sur mobile. Agents, compétences et gunplay de précision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="cta-content">
+      <h2>Prêt à dominer ?</h2>
+      <p>Rejoins des millions de joueurs et découvre tous les jeux mobiles du moment</p>
+      <a href="#jeux" class="btn-primary large">Voir tous les jeux</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <span class="logo-icon">⚔</span>
+          <span class="logo-text">ARENA<span class="accent">MOBILE</span></span>
+        </div>
+        <p>La référence des jeux mobiles en 2025. Tous les titres, toutes les catégories, une seule plateforme.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Jeux</h5>
+        <ul>
+          <li><a href="#">Free Fire</a></li>
+          <li><a href="#">Call of Duty</a></li>
+          <li><a href="#">PUBG Mobile</a></li>
+          <li><a href="#">Brawl Stars</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Catégories</h5>
+        <ul>
+          <li><a href="#">Battle Royale</a></li>
+          <li><a href="#">FPS</a></li>
+          <li><a href="#">MOBA</a></li>
+          <li><a href="#">RPG</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Soumettre un jeu</a></li>
+          <li><a href="#">Partenariats</a></li>
+          <li><a href="mailto:contact@arenamobile.com">contact@arenamobile.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ArenaMobile — Tous droits réservés</p>
+      <div class="social-links">
+        <a href="#">Discord</a>
+        <a href="#">YouTube</a>
+        <a href="#">TikTok</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
