@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Votre Nom</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="logo">&lt;<span>VotreNom</span>/&gt;</a>
+    <ul class="nav-links">
+      <li><a href="index.html">accueil</a></li>
+      <li><a href="about.html">à propos</a></li>
+      <li><a href="skills.html">compétences</a></li>
+      <li><a href="projects.html">projets</a></li>
+      <li><a href="experience.html">parcours</a></li>
+      <li><a href="certifications.html">certifications</a></li>
+      <li><a href="search.html">recherche</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+    <button class="menu-toggle">☰</button>
+  </div>
+</nav>
+
+<main>
+  <section class="page-section">
+    <div class="page-header">
+      <div class="breadcrumb">$ contact --me</div>
+      <h1>Travaillons ensemble</h1>
+      <p>Vous avez un projet, une opportunité de stage, ou simplement envie de discuter ? N'hésitez pas à me contacter — je réponds rapidement.</p>
+    </div>
+
+    <div class="contact-grid reveal">
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Votre nom</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Sujet</label>
+          <input type="text" id="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">📧 Envoyer le message</button>
+      </form>
+
+      <div class="contact-info">
+        <a href="mailto:votre.email@exemple.com" class="contact-link">
+          <div class="icon">📧</div>
+          <div>
+            <div class="label">Email</div>
+            <div class="value">votre.email@exemple.com</div>
+          </div>
+        </a>
+        <a href="https://github.com/votrepseudo" class="contact-link">
+          <div class="icon">⌨️</div>
+          <div>
+            <div class="label">GitHub</div>
+            <div class="value">@votrepseudo</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/votre-profil" class="contact-link">
+          <div class="icon">💼</div>
+          <div>
+            <div class="label">LinkedIn</div>
+            <div class="value">Votre Nom</div>
+          </div>
+        </a>
+        <a href="#" class="contact-link">
+          <div class="icon">📍</div>
+          <div>
+            <div class="label">Localisation</div>
+            <div class="value">Ville, France</div>
+          </div>
+        </a>
+        <a href="#" class="contact-link">
+          <div class="icon">📄</div>
+          <div>
+            <div class="label">CV</div>
+            <div class="value">Télécharger le PDF</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Conçu et développé avec ♥ par <a href="index.html">Votre Nom</a> · © 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
