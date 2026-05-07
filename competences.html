@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compétences — Wissam ABASSE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .category {
+      margin-bottom: 3.5rem;
+    }
+    .category-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      letter-spacing: -0.5px;
+    }
+    .category-title .category-bar {
+      width: 4px;
+      height: 28px;
+      background: linear-gradient(180deg, var(--accent), #ec4899);
+      border-radius: 2px;
+    }
+    .category-subtitle {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      margin-left: 1.85rem;
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 1rem;
+    }
+    .tech-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1rem 1.25rem;
+      text-align: center;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .tech-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), #ec4899);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .tech-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent);
+    }
+    .tech-card:hover::before { transform: scaleX(1); }
+    .tech-icon-wrap {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-alt);
+      border-radius: 14px;
+      transition: transform var(--transition);
+    }
+    .tech-card:hover .tech-icon-wrap {
+      transform: scale(1.1) rotate(-5deg);
+    }
+    .tech-icon-wrap img,
+    .tech-icon-wrap svg {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .tech-name {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    .tech-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    /* Dark mode tweak: invert wireshark/haproxy logos that are dark by default */
+    [data-theme="dark"] .invert-on-dark {
+      filter: invert(1) brightness(1.5);
+    }
+  </style>
+</head>
+<body class="has-bg bg-competences">
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Wissam<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Changer de thème"></button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container">
+      <div class="section-header reveal">
+        <h2>Mes Compétences</h2>
+        <p>Technologies et outils maîtrisés en BTS SIO option SISR</p>
+      </div>
+
+      <!-- ===== Catégorie 1 : Systèmes & Administration ===== -->
+      <div class="category reveal">
+        <div class="category-title">
+          <span class="category-bar"></span>
+          🖥️ Systèmes & Administration
+        </div>
+        <p class="category-subtitle">Déploiement, supervision et virtualisation</p>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="images/dhcp.svg" alt="DHCP" />
+            </div>
+            <div class="tech-name">DHCP</div>
+            <div class="tech-desc">Attribution dynamique IP</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="images/fog.svg" alt="FOG Project" />
+            </div>
+            <div class="tech-name">FOG Project</div>
+            <div class="tech-desc">Déploiement d'images</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="images/glpi.svg" alt="GLPI" />
+            </div>
+            <div class="tech-name">GLPI</div>
+            <div class="tech-desc">Gestion de parc IT</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="images/zabbix.svg" alt="Zabbix" />
+            </div>
+            <div class="tech-name">Zabbix</div>
+            <div class="tech-desc">Supervision & monitoring</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="https://cdn.simpleicons.org/virtualbox/183A61" alt="VirtualBox" />
+            </div>
+            <div class="tech-name">VirtualBox</div>
+            <div class="tech-desc">Virtualisation</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="https://cdn.simpleicons.org/proxmox/E57000" alt="Proxmox" />
+            </div>
+            <div class="tech-name">Proxmox</div>
+            <div class="tech-desc">Hyperviseur</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Catégorie 2 : Réseaux & Sécurité ===== -->
+      <div class="category reveal">
+        <div class="category-title">
+          <span class="category-bar"></span>
+          🌐 Réseaux & Sécurité
+        </div>
+        <p class="category-subtitle">Conception, diagnostic et haute disponibilité</p>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="images/haproxy.svg" alt="HAProxy" />
+            </div>
+            <div class="tech-name">HAProxy</div>
+            <div class="tech-desc">Répartition de charge</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="images/wireshark.svg" alt="Wireshark" />
+            </div>
+            <div class="tech-name">Wireshark</div>
+            <div class="tech-desc">Analyse de trames</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco" />
+            </div>
+            <div class="tech-name">Packet Tracer</div>
+            <div class="tech-desc">Simulation réseau</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Catégorie 3 : Développement ===== -->
+      <div class="category reveal">
+        <div class="category-title">
+          <span class="category-bar"></span>
+          💻 Développement
+        </div>
+        <p class="category-subtitle">Web et programmation</p>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="https://cdn.simpleicons.org/wordpress/21759B" alt="WordPress" />
+            </div>
+            <div class="tech-name">WordPress</div>
+            <div class="tech-desc">CMS web</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" />
+            </div>
+            <div class="tech-name">HTML5</div>
+            <div class="tech-desc">Structure web</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="images/css3.svg" alt="CSS3" />
+            </div>
+            <div class="tech-name">CSS3</div>
+            <div class="tech-desc">Mise en forme</div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-wrap">
+              <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" />
+            </div>
+            <div class="tech-name">Python</div>
+            <div class="tech-desc">Programmation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Wissam ABASSE — Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Wissam ABASSE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .cv-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .cv-header {
+      text-align: center;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+    .cv-header h1 {
+      font-size: 2.5rem;
+      letter-spacing: -1px;
+      margin-bottom: 0.4rem;
+      font-weight: 800;
+    }
+    .cv-header .role {
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+    }
+    .cv-contact {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .cv-section { margin-bottom: 2rem; }
+    .cv-section h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      font-weight: 700;
+    }
+    .cv-entry { margin-bottom: 1.25rem; }
+    .cv-entry-title {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-weight: 600;
+      gap: 0.5rem;
+    }
+    .cv-entry-date { color: var(--accent); font-size: 0.9rem; font-weight: 600; }
+    .cv-entry-place {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-style: italic;
+      margin-bottom: 0.4rem;
+    }
+    .cv-entry ul {
+      margin-top: 0.5rem;
+      padding-left: 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .cv-entry ul li {
+      margin-bottom: 0.3rem;
+    }
+    .skill-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.4rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px dashed var(--border);
+    }
+    .skill-line:last-child { border-bottom: none; }
+    .skill-name { font-weight: 600; }
+    .skill-level {
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: var(--bg-alt);
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+    }
+    .lang-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
+    }
+    .lang-item {
+      background: var(--bg-alt);
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid var(--border);
+    }
+    .lang-name { font-weight: 600; }
+    .lang-level { color: var(--text-muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body class="has-bg bg-cv">
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Wissam<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Changer de thème"></button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container">
+      <div class="section-header reveal">
+        <h2>Mon CV</h2>
+        <p>Aperçu et téléchargement</p>
+      </div>
+
+      <div style="text-align:center; margin-bottom: 2rem;" class="reveal">
+        <a href="Wissam_Abasse-CV.pdf" class="btn btn-primary" download>⬇️ Télécharger le PDF</a>
+        <a href="#" class="btn btn-secondary" onclick="window.print(); return false;">🖨️ Imprimer</a>
+      </div>
+
+      <div class="cv-card reveal delay-1">
+        <div class="cv-header">
+          <h1>Wissam ABASSE</h1>
+          <div class="role">Stagiaire — BTS SIO option SISR</div>
+          <div class="cv-contact">
+            <span>📧 abassewissam@outlook.fr</span>
+            <span>📍 Saint-Joseph 97480, La Réunion</span>
+            <span>🇫🇷 Française</span>
+            <span>🚗 Permis B</span>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Profil</h3>
+          <p style="line-height: 1.7;">
+            Étudiant en <strong>2ᵉ année de BTS SIO</strong> (Services Informatiques aux Organisations) – option <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux), je possède des compétences en configuration de postes, gestion de réseaux locaux et développement web (HTML/CSS, WordPress).
+          </p>
+          <p style="line-height: 1.7; margin-top: 0.75rem;">
+            J'ai participé à plusieurs projets numériques en groupe, notamment la création d'un <strong>CTFD pédagogique</strong> et la réalisation d'un <strong>site web franco-allemand</strong>. Ces expériences m'ont permis de développer mon sens de l'organisation, mon esprit d'équipe et ma créativité dans la résolution de problèmes.
+          </p>
+          <p style="line-height: 1.7; margin-top: 0.75rem;">
+            Motivé et curieux, je souhaite mettre mes compétences au service d'une entreprise lors d'un stage du <strong>14 janvier au 24 février 2026</strong>, afin d'apprendre davantage et contribuer activement à ses projets informatiques.
+          </p>
+        </div>
+
+        <div class="cv-section">
+          <h3>Compétences</h3>
+          <div class="skill-line">
+            <span class="skill-name">Réseaux et infrastructure — configuration de postes, gestion de réseaux locaux, protocoles et adressage IP</span>
+            <span class="skill-level">Opérationnel</span>
+          </div>
+          <div class="skill-line">
+            <span class="skill-name">Développement web — HTML, CSS</span>
+            <span class="skill-level">Intermédiaire</span>
+          </div>
+          <div class="skill-line">
+            <span class="skill-name">Outils — VS Code, Packet Tracer, Wireshark, Edupython</span>
+            <span class="skill-level">Avancé</span>
+          </div>
+          <div class="skill-line">
+            <span class="skill-name">Virtualisation — VirtualBox</span>
+            <span class="skill-level">Avancé</span>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Expérience</h3>
+
+          <div class="cv-entry">
+            <div class="cv-entry-title">
+              <span>Lycée Pierre Poivre — Participant, Projet CTFD</span>
+              <span class="cv-entry-date">11/2024 — 12/2024</span>
+            </div>
+            <div class="cv-entry-place">📍 Saint-Joseph, La Réunion</div>
+            <ul>
+              <li>Création d'énigmes et de défis numériques sur : Internet, Web, réseaux sociaux, données, objets connectés, cartographie et photographie numérique</li>
+              <li>Travail collaboratif pour concevoir un parcours ludique et éducatif</li>
+              <li>Développement de compétences en création de contenu, communication et travail d'équipe</li>
+              <li>Renforcement de la compréhension des concepts du numérique et apprentissage du travail efficace en groupe</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-title">
+              <span>La Mairie — Stagiaire</span>
+              <span class="cv-entry-date">06/2025 — 07/2025</span>
+            </div>
+            <div class="cv-entry-place">📍 Kani-Keli, Mayotte</div>
+            <ul>
+              <li>Création d'une maquette pour un site web de Mairie</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Formation</h3>
+
+          <div class="cv-entry">
+            <div class="cv-entry-title">
+              <span>BTS SIO — Services Informatiques aux Organisations</span>
+              <span class="cv-entry-date">08/2024 — En cours</span>
+            </div>
+            <div class="cv-entry-place">📍 Lycée Pierre Poivre, Saint-Joseph (La Réunion)</div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-title">
+              <span>Baccalauréat Général — Mathématiques & NSI</span>
+              <span class="cv-entry-date">08/2023 — 07/2024</span>
+            </div>
+            <div class="cv-entry-place">📍 Lycée Tani Malandi, Chirongui (Mayotte) — Mention Assez Bien</div>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Certifications & Formations</h3>
+          <ul style="padding-left: 1.25rem; color: var(--text-muted); line-height: 1.8;">
+            <li><strong>Baccalauréat Général</strong> — Spécialités Mathématiques & NSI · 2024</li>
+            <li><strong>Certification HTML &amp; CSS</strong> — OpenClassrooms · 2024</li>
+            <li><strong>Certification RGPD</strong> — CNIL · 2024</li>
+          </ul>
+        </div>
+
+        <div class="cv-section">
+          <h3>Langues</h3>
+          <div class="lang-grid">
+            <div class="lang-item"><span class="lang-name">🇫🇷 Français</span><span class="lang-level">Courant</span></div>
+            <div class="lang-item"><span class="lang-name">🇬🇧 Anglais</span><span class="lang-level">Intermédiaire</span></div>
+            <div class="lang-item"><span class="lang-name">🇪🇸 Espagnol</span><span class="lang-level">Intermédiaire</span></div>
+            <div class="lang-item"><span class="lang-name">🌍 Arabe</span><span class="lang-level">Notions</span></div>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Centres d'intérêt</h3>
+          <p style="color: var(--text-muted);">🎮 Jeux vidéo : stratégie, réflexion et esprit d'équipe &nbsp;·&nbsp; ⚽ Passion pour le football</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Wissam ABASSE — Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

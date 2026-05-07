@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets — Wissam ABASSE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: all var(--transition);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), #ec4899);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent);
+    }
+    .project-card:hover::before { transform: scaleX(1); }
+
+    .project-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .project-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--bg-alt);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform var(--transition);
+    }
+    .project-card:hover .project-icon {
+      transform: scale(1.1) rotate(-5deg);
+    }
+    .project-icon img,
+    .project-icon svg {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .project-number {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+    .project-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0;
+    }
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+    .project-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .location-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .location-badge.school {
+      background: rgba(79, 70, 229, 0.1);
+      color: var(--accent);
+    }
+    .location-badge.internship {
+      background: rgba(236, 72, 153, 0.1);
+      color: #ec4899;
+    }
+    [data-theme="dark"] .location-badge.school {
+      background: rgba(129, 140, 248, 0.15);
+    }
+    [data-theme="dark"] .location-badge.internship {
+      background: rgba(244, 114, 182, 0.15);
+      color: #f472b6;
+    }
+    .location-icon {
+      width: 14px;
+      height: 14px;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    [data-theme="dark"] .invert-on-dark {
+      filter: invert(1) brightness(1.5);
+    }
+  </style>
+</head>
+<body class="has-bg bg-projets">
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Wissam<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Changer de thème"></button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container">
+      <div class="section-header reveal">
+        <h2>Mes Projets</h2>
+        <p>Réalisations en BTS SIO option SISR — Lycée Pierre Poivre</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Projet 1 : HAProxy -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="images/haproxy.svg" alt="HAProxy" />
+            </div>
+            <div>
+              <div class="project-number">Projet 01</div>
+              <h3 class="project-title">Serveur HAProxy</h3>
+            </div>
+          </div>
+          <p class="project-desc">
+            Mise en place d'un serveur de répartition de charge avec HAProxy pour assurer la haute disponibilité de services web.
+          </p>
+          <div class="project-footer">
+            <span class="location-badge school">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+              École
+            </span>
+            <div class="project-tags">
+              <span class="tag">HAProxy</span>
+              <span class="tag">Load balancing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 2 : GLPI -->
+        <div class="project-card reveal delay-1">
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="images/glpi.svg" alt="GLPI" />
+            </div>
+            <div>
+              <div class="project-number">Projet 02</div>
+              <h3 class="project-title">Mise en place de GLPI</h3>
+            </div>
+          </div>
+          <p class="project-desc">
+            Déploiement et configuration de GLPI pour la gestion d'un parc informatique : inventaire, tickets et suivi des équipements.
+          </p>
+          <div class="project-footer">
+            <span class="location-badge school">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+              École
+            </span>
+            <div class="project-tags">
+              <span class="tag">GLPI</span>
+              <span class="tag">Gestion de parc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 3 : DHCP -->
+        <div class="project-card reveal delay-2">
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="images/dhcp.svg" alt="DHCP" />
+            </div>
+            <div>
+              <div class="project-number">Projet 03</div>
+              <h3 class="project-title">Serveur DHCP</h3>
+            </div>
+          </div>
+          <p class="project-desc">
+            Installation d'un serveur DHCP : distribution automatique d'adresses IP, configuration des étendues et gestion des réservations.
+          </p>
+          <div class="project-footer">
+            <span class="location-badge school">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+              École
+            </span>
+            <div class="project-tags">
+              <span class="tag">DHCP</span>
+              <span class="tag">Réseau</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 4 : FOG -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="images/fog.svg" alt="FOG" />
+            </div>
+            <div>
+              <div class="project-number">Projet 04</div>
+              <h3 class="project-title">Serveur FOG — Déploiement PXE</h3>
+            </div>
+          </div>
+          <p class="project-desc">
+            Mise en place d'un serveur FOG pour le déploiement d'images système par PXE et le clonage automatisé de postes de travail.
+          </p>
+          <div class="project-footer">
+            <span class="location-badge internship">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-3V5a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3v2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM10 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2h-4z"></path></svg>
+              Stage — Conseil Départemental
+            </span>
+            <div class="project-tags">
+              <span class="tag">FOG</span>
+              <span class="tag">PXE</span>
+              <span class="tag">Clonage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 5 : Wireshark -->
+        <div class="project-card reveal delay-1">
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="images/wireshark.svg" alt="Wireshark" />
+            </div>
+            <div>
+              <div class="project-number">Projet 05</div>
+              <h3 class="project-title">Analyse réseau avec Wireshark</h3>
+            </div>
+          </div>
+          <p class="project-desc">
+            Capture et analyse de trames réseau avec Wireshark pour diagnostiquer un problème précis et étudier le trafic.
+          </p>
+          <div class="project-footer">
+            <span class="location-badge school">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+              École
+            </span>
+            <div class="project-tags">
+              <span class="tag">Wireshark</span>
+              <span class="tag">Diagnostic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 6 : Zabbix -->
+        <div class="project-card reveal delay-2">
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="images/zabbix.svg" alt="Zabbix" />
+            </div>
+            <div>
+              <div class="project-number">Projet 06</div>
+              <h3 class="project-title">Serveur Zabbix — Supervision</h3>
+            </div>
+          </div>
+          <p class="project-desc">
+            Installation et configuration de Zabbix pour superviser l'état des serveurs et services réseau, avec alertes et tableaux de bord.
+          </p>
+          <div class="project-footer">
+            <span class="location-badge school">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+              École
+            </span>
+            <div class="project-tags">
+              <span class="tag">Zabbix</span>
+              <span class="tag">Monitoring</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 7 : Site HTML/CSS -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" />
+            </div>
+            <div>
+              <div class="project-number">Projet 07</div>
+              <h3 class="project-title">Site web HTML & CSS</h3>
+            </div>
+          </div>
+          <p class="project-desc">
+            Création d'un site web statique en HTML5 et CSS3 : structure sémantique, mise en page responsive et stylisation moderne.
+          </p>
+          <div class="project-footer">
+            <span class="location-badge school">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+              École
+            </span>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 8 : WordPress -->
+        <div class="project-card reveal delay-1">
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="https://cdn.simpleicons.org/wordpress/21759B" alt="WordPress" />
+            </div>
+            <div>
+              <div class="project-number">Projet 08</div>
+              <h3 class="project-title">Site web WordPress</h3>
+            </div>
+          </div>
+          <p class="project-desc">
+            Conception et déploiement d'un site web complet sous WordPress : choix du thème, configuration des plugins et personnalisation.
+          </p>
+          <div class="project-footer">
+            <span class="location-badge school">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+              École
+            </span>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">CMS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Wissam ABASSE — Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

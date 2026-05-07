@@ -1,136 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Certifications — Votre Nom</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications — Mon Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ====== Hero with cherry blossom background ====== */
+    .hero-sakura {
+      position: relative;
+      min-height: 92vh;
+      padding: 5rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #4a2538; /* fallback if image missing */
+      background-image:
+        linear-gradient(135deg, rgba(20, 10, 30, 0.35), rgba(120, 40, 80, 0.4)),
+        url('images/image1.png'),
+        linear-gradient(135deg, #FFB7D5 0%, #C84B7A 50%, #4a2538 100%);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+  </style>
+  
 </head>
-<body>
-
-<nav>
-  <div class="nav-container">
-    <a href="index.html" class="logo">&lt;<span>VotreNom</span>/&gt;</a>
-    <ul class="nav-links">
-      <li><a href="index.html">accueil</a></li>
-      <li><a href="about.html">à propos</a></li>
-      <li><a href="skills.html">compétences</a></li>
-      <li><a href="projects.html">projets</a></li>
-      <li><a href="experience.html">parcours</a></li>
-      <li><a href="certifications.html">certifications</a></li>
-      <li><a href="search.html">recherche</a></li>
-      <li><a href="contact.html">contact</a></li>
-    </ul>
-    <button class="menu-toggle">☰</button>
-  </div>
-</nav>
-
-<main>
-  <section class="page-section">
-    <div class="page-header">
-      <div class="breadcrumb">$ ls certifications/</div>
-      <h1>Certifications</h1>
-      <p>Mes certifications obtenues — preuves concrètes des compétences acquises au fil de mon parcours.</p>
+<body class="has-bg bg-certifs">
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Portfolio<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Changer de thème"></button></li>
+      </ul>
     </div>
+  </nav>
 
-    <h2>🇫🇷 Officielles</h2>
-    <div class="certs-grid reveal">
-      <div class="cert-card">
-        <div class="cert-icon">🏆</div>
-        <div class="cert-info">
-          <h4>PIX</h4>
-          <p>Niveau certifié : 5</p>
-          <div class="cert-date">2024</div>
-        </div>
+  <main>
+    <section class="container">
+      <div class="section-header reveal">
+        <h2>Mes Certifications</h2>
+        <p>Diplômes et reconnaissances obtenus</p>
       </div>
-      <div class="cert-card">
-        <div class="cert-icon">📜</div>
-        <div class="cert-info">
-          <h4>Diplôme National du Brevet</h4>
-          <p>Mention Très Bien</p>
-          <div class="cert-date">2023</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🚗</div>
-        <div class="cert-info">
-          <h4>ASSR 2</h4>
-          <p>Attestation Scolaire de Sécurité Routière</p>
-          <div class="cert-date">2022</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🆘</div>
-        <div class="cert-info">
-          <h4>PSC1</h4>
-          <p>Prévention et Secours Civiques niveau 1</p>
-          <div class="cert-date">2023</div>
-        </div>
-      </div>
-    </div>
 
-    <h2 style="margin-top: 60px;">🌍 Langues</h2>
-    <div class="certs-grid reveal">
-      <div class="cert-card">
-        <div class="cert-icon">🇬🇧</div>
-        <div class="cert-info">
-          <h4>Cambridge English — B2 First</h4>
-          <p>Score : XXX / 190</p>
-          <div class="cert-date">2024</div>
+      <div class="grid grid-2">
+        <div class="card reveal delay-1">
+          <div class="meta">2024 · Officiel</div>
+          <h3>🎓 Baccalauréat Général</h3>
+          <p>Spécialités Mathématiques et NSI. Mention à préciser. Établissement : Lycée [Nom du lycée].</p>
+          <div class="tags">
+            <span class="tag">Bac</span>
+            <span class="tag">Maths</span>
+            <span class="tag">NSI</span>
+          </div>
         </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🇪🇸</div>
-        <div class="cert-info">
-          <h4>DELE — Espagnol A2</h4>
-          <p>Diplôme officiel d'espagnol</p>
-          <div class="cert-date">2023</div>
-        </div>
-      </div>
-    </div>
 
-    <h2 style="margin-top: 60px;">💻 Tech</h2>
-    <div class="certs-grid reveal">
-      <div class="cert-card">
-        <div class="cert-icon">🟨</div>
-        <div class="cert-info">
-          <h4>OpenClassrooms — JavaScript</h4>
-          <p>Parcours développeur web</p>
-          <div class="cert-date">2025</div>
+        <div class="card reveal delay-2">
+          <div class="meta">2022 · Officiel</div>
+          <h3>📜 Diplôme National du Brevet</h3>
+          <p>Diplôme National du Brevet (DNB) obtenu avec mention.</p>
+          <div class="tags">
+            <span class="tag">DNB</span>
+            <span class="tag">Mention</span>
+          </div>
         </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🌐</div>
-        <div class="cert-info">
-          <h4>FreeCodeCamp — Responsive Web Design</h4>
-          <p>300h de cours validées</p>
-          <div class="cert-date">2025</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🐍</div>
-        <div class="cert-info">
-          <h4>Python pour les débutants</h4>
-          <p>Coursera — University of Michigan</p>
-          <div class="cert-date">2024</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🎓</div>
-        <div class="cert-info">
-          <h4>Harvard CS50</h4>
-          <p>Introduction to Computer Science</p>
-          <div class="cert-date">2024</div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
 
-<footer>
-  Conçu et développé avec ♥ par <a href="index.html">Votre Nom</a> · © 2026
-</footer>
+        <div class="card reveal delay-1">
+          <div class="meta">2024 · En ligne</div>
+          <h3>🐍 Python pour Débutants</h3>
+          <p>Certification en ligne couvrant les bases du langage Python : variables, fonctions, boucles, structures de données.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Programmation</span>
+          </div>
+        </div>
 
-<script src="script.js"></script>
+        <div class="card reveal delay-2">
+          <div class="meta">2023 · En ligne</div>
+          <h3>🌐 Développement Web — HTML/CSS</h3>
+          <p>Certification couvrant la création de sites web responsives avec HTML5 et CSS3 modernes (Flexbox, Grid).</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+
+        <div class="card reveal delay-1">
+          <div class="meta">2023 · En ligne</div>
+          <h3>⚡ JavaScript Essentials</h3>
+          <p>Maîtrise des bases de JavaScript : DOM, événements, asynchrone, ES6+.</p>
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Web</span>
+          </div>
+        </div>
+
+        <div class="card reveal delay-2">
+          <div class="meta">2023 · Officiel</div>
+          <h3>🌍 Cambridge English B2 First</h3>
+          <p>Certification d'anglais niveau B2 (First Certificate in English) reconnue internationalement.</p>
+          <div class="tags">
+            <span class="tag">Anglais</span>
+            <span class="tag">B2</span>
+          </div>
+        </div>
+
+        <div class="card reveal delay-1">
+          <div class="meta">2022 · Officiel</div>
+          <h3>🛡️ PIX — Compétences Numériques</h3>
+          <p>Certification française des compétences numériques (informatique, recherche d'information, communication, sécurité).</p>
+          <div class="tags">
+            <span class="tag">PIX</span>
+            <span class="tag">Numérique</span>
+          </div>
+        </div>
+
+        <div class="card reveal delay-2">
+          <div class="meta">2022 · Officiel</div>
+          <h3>🚑 PSC1 — Premiers Secours</h3>
+          <p>Prévention et Secours Civiques de Niveau 1, formation aux gestes qui sauvent.</p>
+          <div class="tags">
+            <span class="tag">Secourisme</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Votre Nom — Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

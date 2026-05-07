@@ -1,48 +1,197 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Votre Nom — Portfolio</title>
-<meta name="description" content="Portfolio étudiant — développement, projets, compétences">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil — Wissam ABASSE</title>
+  <meta name="description" content="Portfolio de Wissam ABASSE — étudiant en BTS SIO option SISR." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ====== Hero with cherry blossom background ====== */
+    .hero-sakura {
+      position: relative;
+      min-height: 92vh;
+      padding: 5rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #4a2538; /* fallback if image missing */
+      background-image:
+        linear-gradient(135deg, rgba(20, 10, 30, 0.35), rgba(120, 40, 80, 0.4)),
+        url('images/image1.png'),
+        linear-gradient(135deg, #FFB7D5 0%, #C84B7A 50%, #4a2538 100%);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .hero-sakura::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 60%, var(--bg) 100%);
+      pointer-events: none;
+    }
+    .hero-sakura .hero-content {
+      position: relative;
+      z-index: 5;
+      text-align: center;
+      max-width: 850px;
+    }
+    .hero-sakura h1 {
+      color: white;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.6), 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .hero-sakura h1 span {
+      background: linear-gradient(135deg, #FFE4EE, #FF9DBE, #FFC0CB);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+    }
+    .hero-sakura .subtitle {
+      color: #ffe9f1;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 15px rgba(0,0,0,0.7);
+      font-weight: 500;
+    }
+    .hero-sakura .subtitle strong {
+      color: #FFD4E5;
+    }
+    .hero-sakura .btn-primary {
+      background: rgba(255, 157, 190, 0.95);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .hero-sakura .btn-primary:hover {
+      background: #FF7BA8;
+    }
+    .hero-sakura .btn-secondary {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      color: white;
+      border-color: rgba(255,255,255,0.4);
+    }
+    .hero-sakura .btn-secondary:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* ====== Falling petals ====== */
+    .petals {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 90;
+      overflow: hidden;
+    }
+    .petal {
+      position: absolute;
+      top: -10vh;
+      background-image: url('images/petal.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      will-change: transform, top;
+      animation:
+        petalFall var(--fall-duration, 12s) linear infinite,
+        petalSway var(--sway-duration, 3s) ease-in-out infinite alternate;
+      animation-delay: var(--fall-delay, 0s);
+      filter: drop-shadow(0 2px 4px rgba(180, 80, 120, 0.2));
+    }
+    @keyframes petalFall {
+      0% {
+        top: -10vh;
+        transform: rotate(0deg);
+      }
+      100% {
+        top: 110vh;
+        transform: rotate(var(--rotate-end, 720deg));
+      }
+    }
+    @keyframes petalSway {
+      0%   { margin-left: -30px; }
+      100% { margin-left: 30px; }
+    }
+
+    /* "Qui suis-je" card on white panel for contrast */
+    .about-card {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
-
-<nav>
-  <div class="nav-container">
-    <a href="index.html" class="logo">&lt;<span>VotreNom</span>/&gt;</a>
-    <ul class="nav-links">
-      <li><a href="index.html">accueil</a></li>
-      <li><a href="about.html">à propos</a></li>
-      <li><a href="skills.html">compétences</a></li>
-      <li><a href="projects.html">projets</a></li>
-      <li><a href="experience.html">parcours</a></li>
-      <li><a href="certifications.html">certifications</a></li>
-      <li><a href="search.html">recherche</a></li>
-      <li><a href="contact.html">contact</a></li>
-    </ul>
-    <button class="menu-toggle">☰</button>
-  </div>
-</nav>
-
-<main>
-  <section class="hero">
-    <div class="hero-greeting">$ whoami</div>
-    <h1>Votre Nom<span class="cursor"></span></h1>
-    <h2>Étudiant en informatique.</h2>
-    <p>Bienvenue sur mon portfolio. Je suis passionné par le développement web et les nouvelles technologies. Découvrez mon parcours, mes projets et ce qui m'anime au quotidien.</p>
-    <div class="hero-buttons">
-      <a href="projects.html" class="btn btn-primary">Voir mes projets →</a>
-      <a href="contact.html" class="btn">Me contacter</a>
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Wissam<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème"></button>
+        </li>
+      </ul>
     </div>
-  </section>
-</main>
+  </nav>
 
-<footer>
-  Conçu et développé avec ♥ par <a href="index.html">Votre Nom</a> · © 2026
-</footer>
+  <!-- ===== Main ===== -->
+  <main>
+    <section class="hero-sakura">
+      <div class="hero-content reveal">
+        <h1><span>Wissam ABASSE</span></h1>
+        <p class="subtitle">
+          <strong id="typedText"></strong><span style="color: #FFD4E5">|</span>
+        </p>
+        <p class="subtitle">
+          Étudiant en 2ᵉ année de BTS SIO — option SISR.
+        </p>
+        <div class="btn-group">
+          <a href="parcours.html" class="btn btn-primary">Mon parcours</a>
+          <a href="cv.html" class="btn btn-secondary">Mon CV</a>
+        </div>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <section class="container">
+      <div class="section-header reveal">
+        <h2>Qui suis-je ?</h2>
+        <p>Quelques mots de présentation</p>
+      </div>
+
+      <div class="card about-card reveal delay-1">
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+          Je m'appelle <strong>Wissam ABASSE</strong>, actuellement en
+          <strong>2ᵉ année de BTS SIO</strong> (Services Informatiques aux
+          Organisations) — option <strong>SISR</strong>
+          <em>(Solutions d'Infrastructure, Systèmes et Réseaux)</em>.
+        </p>
+        <p style="margin-top: 1rem; color: var(--text-muted);">
+          Passionné par l'administration système, les réseaux et la
+          virtualisation, je me forme aux outils professionnels d'infrastructure
+          IT (Proxmox, Zabbix, GLPI, HAProxy, Cisco…) et je développe également
+          des projets web pour élargir mes compétences.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Wissam ABASSE — Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
